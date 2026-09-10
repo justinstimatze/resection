@@ -1,0 +1,4 @@
+/resection
+*.test
+.env
+.claude/settings.local.json
