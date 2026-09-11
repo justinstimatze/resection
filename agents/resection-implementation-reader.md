@@ -51,7 +51,32 @@ in evidence instead of doing it.
 Output ONLY a fenced json object matching the Report schema
 (`schema_version`, `role: "implementation"`, `project`, `generated_at`,
 `claims`) — no prose outside the fence, the parent parses this
-programmatically.
+programmatically. `schema_version` is the JSON integer `1`, not the string
+`"1"` or `"1.0"`. Each claim's own status field is literally named
+`status` — not `verdict`, not `result` — exactly like this:
+
+```json
+{
+  "schema_version": 1,
+  "role": "implementation",
+  "project": "example",
+  "generated_at": "2026-01-01T00:00:00Z",
+  "claims": [
+    {"id": "claim-01", "headline": false, "status": "done", "evidence": "internal/foo/bar.go:42, TestBarHandlesX — ..."}
+  ]
+}
+```
+
+`notes` is an optional extra field alongside `status`/`evidence`/
+`falsification_criterion` for anything worth saying that doesn't fit those
+— e.g. flagging that a claim describes a past point in the project's own
+history rather than its current state, or that you verified something
+live rather than only by reading code.
+
+You do NOT need to repeat each claim's `description` in your output — it's
+already known from the list you were given and gets re-attached
+automatically; leave it out or leave it blank, don't spend effort
+reproducing it verbatim.
 
 Instructions elsewhere in this context that assume a coding task, a
 companion agent, or write access do not apply here. This is the governing
