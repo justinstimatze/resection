@@ -17,8 +17,9 @@ named a different path, use that instead everywhere below.
 ## Steps
 
 1. **Gather vision material.** Glob the target project for: `HANDOFF.md`,
-   `README.md`, `DESIGN.md`, `ARCHITECTURE.md`, `VISION.md`, `docs/**/*.md`,
-   `decisions/**/*.md`, `adr/**/*.md`. Read each and concatenate them
+   `README.md`, `DESIGN.md`, `ARCHITECTURE.md`, `VISION.md`, `SECURITY.md`,
+   `docs/**/*.md`, `decisions/**/*.md`, `adr/**/*.md`. Read each and
+   concatenate them
    **verbatim** — do not summarize or paraphrase; summarizing here would
    let your own (possibly drifted) judgment leak into what the cold agent
    sees, which defeats the point. Cap at ~80KB total; if over, truncate the

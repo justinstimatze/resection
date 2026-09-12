@@ -99,7 +99,7 @@ same mechanism reachable on demand, always available regardless of whether the t
 |---|---|---|
 | `N` (compacts between automatic firings) | `RESECTION_N` env var | `8` — a placeholder, not a considered choice |
 | Automatic trigger | `resection install --with-hooks` | off |
-| Vision-document glob | `skills/resection/SKILL.md` step 1 | `HANDOFF.md`, `README.md`, `DESIGN.md`, `ARCHITECTURE.md`, `VISION.md`, `docs/**/*.md`, `decisions/**/*.md`, `adr/**/*.md`, capped ~80KB |
+| Vision-document glob | `skills/resection/SKILL.md` step 1 | `HANDOFF.md`, `README.md`, `DESIGN.md`, `ARCHITECTURE.md`, `VISION.md`, `SECURITY.md`, `docs/**/*.md`, `decisions/**/*.md`, `adr/**/*.md`, capped ~80KB |
 
 `N` has no considered value yet — it's picked empirically once a project has run resection
 enough times to produce a real cost-per-run figure to weigh against how often flagged rows turn
